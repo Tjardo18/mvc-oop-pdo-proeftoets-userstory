@@ -136,3 +136,9 @@ th,
 td {
     padding: 2px 7px;
 }
+
+
+input[type="text"] {
+    height: 30px;
+    border-radius: 12px;
+}

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?= URLROOT; ?>/css/style.css">
-    <title>Home</title>
+    <title>Kilometers Invoeren</title>
 </head>
 
 <body>
@@ -18,9 +18,9 @@
         </a>
 
         <ul class="navbar">
-            <li><a href="<?= URLROOT; ?>" class="active">Home</a></li>
+            <li><a href="<?= URLROOT; ?>">Home</a></li>
             <li><a href="<?= URLROOT; ?>/instructeur">Instructeurs</a></li>
-            <li><a href="<?= URLROOT; ?>/kilometer">Kilometers</a></li>
+            <li><a href="<?= URLROOT; ?>/kilometer" class="active">Kilometers</a></li>
         </ul>
 
         <div class="main">
@@ -33,22 +33,31 @@
         </div>
     </header>
 
-    <h2><?= $data['title']; ?></h2>
+    <div class="container">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <h1>
+            <?= $data['title']; ?>
+        </h1>
+        <h3>
+            <?= $data['type'] . ' ' . $data['kenteken']; ?>
+        </h3>
 
-    <table border="1">
-        <thead>
-            <th>Id</th>
-            <th>Naam</th>
-        </thead>
-        <tbody>
-            <tr>
-                <td><?= $data['id']; ?></td>
-                <td><?= $data['name']; ?></td>
-            </tr>
-        </tbody>
-    </table>
+        <div class="card">
+            <div class="ruimte">
+                <form action="" method="post">
+                    <label for="kmstand">Kilometerstand</label>
+                    <br>
+                    <input type="text" id="kmStand" name="kmStand">
+                    <br>
+                    <button type="submit">Voer In</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <script src="<?= URLROOT; ?>/js/nav.js"></script>
+
 </body>
 
 </html>
